@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KingShot War Advisor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>⚔️ War Advisor</h1>
+
+  <div class="card">
+    <h3>Mode</h3>
+    <label><input type="radio" name="mode" value="ATTACK" checked> Attack</label>
+    <label><input type="radio" name="mode" value="DEFENSE"> Defense</label>
+  </div>
+
+  <div class="card">
+    <h3>Battle Feel</h3>
+
+    <label>
+      Duration:
+      <select id="duration">
+        <option value="SHORT">Short</option>
+        <option value="MEDIUM">Medium</option>
+        <option value="LONG">Long</option>
+      </select>
+    </label>
+
+    <label><input type="checkbox" id="frontline"> Frontline collapsed early</label>
+    <label><input type="checkbox" id="lowDps"> Low DPS</label>
+    <label><input type="checkbox" id="enemyControl"> Heavy enemy control</label>
+  </div>
+
+  <button onclick="analyze()">▶ Analyze</button>
+
+  <div id="result" class="result"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
